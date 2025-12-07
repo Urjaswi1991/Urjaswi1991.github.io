@@ -21,190 +21,202 @@
 </header>
 
 <style>
-  body {
-    background: #E6E6FA; /* Lavender */
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-  }
+    body {
+      margin: 0;
+      padding: 40px 10%;
+      background: #f5f5fc;
+      color: #222;
+      font-family: "Source Serif 4", "Georgia", "Times New Roman", serif;
+      line-height: 1.7;
+    }
 
-  .content-box {
-    background: white;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.08);
-    max-width: 1000px;
-    margin: auto;
-  }
+    .research-wrapper {
+      max-width: 1100px;
+      margin: 0 auto 60px auto;
+    }
 
-  h1, h2, h3 {
-    font-family: "Georgia", serif;
-    color: #4B0082; /* Indigo */
-  }
+    h1 {
+      font-family: "Playfair Display", "Georgia", serif;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
 
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-  }
+    h2 {
+      font-size: 24px;
+      margin-top: 28px;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
 
-  td {
-    vertical-align: top;
-    padding: 8px;
-  }
+    h3 {
+      font-size: 18px;
+      margin-top: 20px;
+      margin-bottom: 6px;
+      font-weight: 700;
+    }
 
-  img {
-    width: 100%;
-    border-radius: 10px;
-  }
+    ol {
+      padding-left: 22px;
+    }
 
-  .paper-card {
-    background: #faf8ff;
-    border-left: 5px solid #6A5ACD; /* Slate blue */
-    padding: 18px;
-    margin-bottom: 30px;
-    border-radius: 10px;
-  }
+    li {
+      margin-bottom: 12px;
+    }
 
-  .paper-title {
-    font-weight: bold;
-    color: #333;
-    font-size: 18px;
-  }
+    a {
+      color: #1b4f72;
+      text-decoration: underline;
+    }
 
-</style>
+    a:hover {
+      text-decoration: none;
+    }
 
-<div class="content-box">
+    /* One paper block: text + image side by side */
+    .paper-block {
+      display: flex;
+      align-items: flex-start;
+      gap: 30px;
+      margin-top: 18px;
+      padding: 22px 24px;
+      border-radius: 18px;
+      background: #ffffff;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+    }
 
-<h1>Research</h1>
+    .paper-text {
+      flex: 2;
+      font-size: 15px;
+    }
 
-<h2>Publications</h2>
+    .paper-image {
+      flex: 1.3;
+      border-radius: 18px;
+      overflow: hidden;
+      background: #fafafa;
+    }
 
-<div class="paper-card">
-  1. Mukherjee, U., Pingle, M. (2023). 
-  <a href="https://example.com/paper1" target="_blank">
-    Book Review of Behavioural Economics and Experiments, by Ananish Chaudhuri
-  </a>. 
-  <i>Journal of Behavioral Economics for Policy</i>, 7(1), 51–52.
-</div>
+    .paper-image img {
+      width: 100%;
+      display: block;
+    }
 
-<h2>Working Papers</h2>
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid #c5d3f5;
+      background: #e8f0ff;
+      font-size: 12px;
+      margin: 8px 0 10px 0;
+    }
 
-<!-- PAPER 1 -->
-<div class="paper-card">
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #3b5998;
+    }
 
-  <div class="paper-title">
-    1. Job Market Paper: The Effects of Extended Medicaid Postpartum Coverage on Insurance and Mental Health Outcomes
-  </div>
-  <i>With Sankar Mukhopadhyay</i>
+    .abstract-title {
+      font-weight: 700;
+      margin-top: 18px;
+      margin-bottom: 4px;
+    }
 
-  <h3>Abstract</h3>
+    .abstract-text {
+      margin-top: 0;
+      font-size: 15px;
+    }
 
-  <table>
-    <tr>
-      <td style="width:100%; padding-right:15px;">
-        Despite the United States' high healthcare expenditure, maternal outcomes remain 
-significantly worse compared to other developed nations. The American Rescue Plan Act 
-(ARPA) of 2021 aimed to address this issue by allowing states to extend Medicaid postpartum 
-coverage from 60 days to 12 months. In an era dominated by sharp differences and party 
-ideology, most red and blue states moved quickly to adopt this extension. This paper evaluates 
-the effects of this policy change using high-frequency data from the Household Pulse Survey and 
-a staggered Difference-in-Differences (DiD) framework. Our findings indicate that the 
-postpartum coverage expansion significantly increased Medicaid enrollment and reduced 
-uninsurance rates among women of childbearing age. Additionally, the policy led to notable 
-reductions in moderate to severe anxiety and depression, highlighting its positive impact on 
-maternal mental health. The results underscore the importance of continuous health insurance 
-coverage in improving maternal mental health. 
-      </td>
+    /* Small screens: stack the columns */
+    @media (max-width: 800px) {
+      body {
+        padding: 24px 16px;
+      }
+      .paper-block {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
 
-      <td style="width:40%; text-align:center;">
-        <img src="Paper_1.png">
-      </td>
-    </tr>
-  </table>
+<div class="research-wrapper">
 
-</div>
+  <h1>Research</h1>
 
-<!-- PAPER 2 -->
-<div class="paper-card">
+  <!-- Publications ---------------------------------------------------->
+  <h2>Publications</h2>
+  <ol>
+    <li>
+      YourLastName, Y. (2023).
+      <a href="#">Title of Your Published Paper</a>,
+      Journal Name, volume(issue), pages.
+    </li>
+  </ol>
 
-  <div class="paper-title">
-    2. The Effects of Debt Relief on the Mental Health of Farmers
-  </div>
-  <i>With Sankar Mukhopadhyay</i>
+  <!-- Working Papers -------------------------------------------------->
+  <h2>Working Papers</h2>
 
-  <h3>Abstract</h3>
+  <ol>
+    <li>
+      <strong>Job Market Paper.</strong>
+      <a href="#">Title of Your Job Market Paper</a><br>
+      <em>With Coauthor Name</em><br>
+      Working Paper / Discussion Paper No. XXXX
 
-   We use the quasi-exogenous variation from the farm debt relief programs established
-   by the 2022 Inflation Reduction Act (IRA) to estimate the effect of debt relief on 
-   the mental health outcomes of the farmers in the U.S. Using high-frequency (monthly)
-   nationally representative data from the Household Pulse Survey (HPS) and difference 
-   in difference regressions we find that the IRA debt relief programs improved mental 
-   health of farmers. Our preferred estimates suggest that among farmers anxiety decreased
-   by 9.5% and depression by 9.0%. The effects are stronger among minority farmers. Anxiety
-   decreased by 25.2%, and depression decreased by 28.0% among minority farmers. These 
-   results suggest that the IRA debt relief had a positive effect on the mental health of 
-   farmers, especially the minority farmers.
+      <div class="badge">
+        <span class="badge-dot"></span>
+        Major Revision at&nbsp;<strong>Journal Name</strong>
+      </div>
 
-</div>
+      <div class="paper-block">
+        <!-- Left: text -->
+        <div class="paper-text">
+          <p style="font-style:italic; font-size:14px; margin-top:0;">
+            Presented at Conference 1 2025, Conference 2 2024, University of Nevada, Reno 2024, etc.
+          </p>
 
-<!-- PAPER 3 -->
-<div class="paper-card">
+          <p class="abstract-title">Abstract:</p>
+          <p class="abstract-text">
+            This paper investigates the impact of regional minimum wage increases on nonemployer
+            business establishments in the United States. We develop a theoretical model of
+            occupational choice motivating our empirical analysis. The effects of minimum wages are
+            estimated using panel data on nonemployer establishments in contiguous counties
+            across neighboring states. Our findings indicate that a $1 increase in the minimum
+            wage reduces the number of nonemployer establishments in low-wage counties, while
+            leaving high-wage counties largely unaffected. [Replace this paragraph with your own abstract.]
+          </p>
 
-  <div class="paper-title">
-    3. Impact of Negative Life Events on Financial Risk Taking
-  </div>
-  <i>With Federico Guerrero</i>
+          <p style="font-size:13px; margin-top:10px;">
+            <span style="opacity:0.7;">＋</span> coauthor presentation
+          </p>
+        </div>
 
-  <h3>Abstract</h3>
+        <!-- Right: image -->
+        <div class="paper-image">
+          <!-- Replace 'map-figure.png' with the file name of your figure in the repo -->
+          <img src="map-figure.png" alt="Figure from the paper">
+        </div>
+      </div>
+    </li>
 
-  <table>
-    <tr>
-      <td style="width:100%; padding-right:15px;">
-          This paper investigates whether traumatic life events—specifically, the loss of a 
-          child—shape individuals’ willingness to engage in financial risk-taking.
-          Using data from the 2004–2016 waves of the US Health and Retirement Study (HRS),
-          we proxy risk preferences through observed portfolio decisions, focusing 
-          primarily on stock market participation as an indicator of financial risk-taking 
-          behavior. Our analysis reveals that individuals who have experienced the death of
-          a child are less likely to invest in risky assets, suggesting the presence of a
-          negative association between bereavement and financial risk-taking. However, while 
-          the evidence points to a potential correlation, the relationship is not statistically
-          definitive. These findings contribute to the broader literature on how deeply 
-          personal and emotionally significant life shocks can influence economic 
-          decision-making, highlighting the possibility that traumatic experiences may have
-          persistent effects even in domains unrelated to the original event.
-      </td>
+    <!-- Example of another working paper without image -->
+    <li>
+      <strong>Paper 2.</strong> Title of Another Working Paper<br>
+      <em>Solo-authored</em><br>
+      <span style="font-size:14px;">
+        Short description or abstract here (you can reuse the same structure as above if you want an image too).
+      </span>
+    </li>
+  </ol>
 
-      <td style="width:40%; text-align:center;">
-        <img src="neglif.png">
-        <br>
-        <sub><i>Proportion of stock holders conditional on the number of life events</i></sub>
-      </td>
-    </tr>
-  </table>
-
-</div>
-
-<h2>Work in Progress</h2>
-
-<div class="paper-card">
-  <strong>The Hidden Costs of Care: Health and Economic Impacts of Informal Caregiving in the United States.</strong><br>
-  <i>Solo-authored paper</i>
-</div>
-
-<div class="paper-card">
-  <strong>The Effects of Intergenerational Investment Advice.</strong><br>
-  <i>With Federico Guerrero and Garret Ridinger</i>
-</div>
-
-<div class="paper-card">
-  <strong>Empathy in Economic Decision Making: Propensity to Be Helpful When Faced with Varied Costs.</strong><br>
-  <i>With Mark Pingle</i>
 </div>
 
 </body>
 </html>
-
 
 
