@@ -20,6 +20,100 @@
   </div>
 </header>
 
+<style>
+    body {
+      margin: 0;
+      padding: 40px 10%;
+      background: #fafafa;
+      color: #2b2b2b;
+      font-family: "Source Serif 4", "Georgia", "Times New Roman", serif;
+      line-height: 1.6;
+    }
+
+    #teaching {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    #teaching h1 {
+      font-family: "Playfair Display", "Georgia", serif;
+      font-size: 32px;
+      margin-bottom: 6px;
+    }
+
+    #teaching h2 {
+      font-size: 22px;
+      margin-top: 18px;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+
+    #teaching h3 {
+      font-size: 18px;
+      margin-top: 18px;
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+
+    #teaching ul {
+      margin-top: 4px;
+      padding-left: 20px;
+    }
+
+    #teaching li {
+      margin-bottom: 4px;
+    }
+
+    /* Thin divider between sections */
+    .teaching-divider {
+      border-top: 1px solid #ddd;
+      margin: 25px 0 20px 0;
+    }
+
+    /* Feedback cards layout */
+    .feedback-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: center;
+      margin-top: 18px;
+    }
+
+    .feedback-card {
+      position: relative;
+      flex: 1 1 260px;
+      max-width: 320px;
+      background: #f8fafc;
+      border-radius: 12px;
+      padding: 16px 18px 18px 18px;
+      font-size: 14px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+
+    .feedback-card::before {
+      content: "“";
+      position: absolute;
+      top: 4px;
+      left: 10px;
+      font-size: 32px;
+      opacity: 0.16;
+    }
+
+    .feedback-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    /* Small screens */
+    @media (max-width: 768px) {
+      body {
+        padding: 24px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
 <section id="teaching">
   <h1>Teaching</h1>
 
@@ -43,58 +137,63 @@
     <li>ECON 103 Principles of Macroeconomics – Fall 2021</li>
   </ul>
 
+  <div class="teaching-divider"></div>
+
   <h2>🎓 Student Feedback Highlights</h2>
 
   <div class="feedback-grid">
     <div class="feedback-card">
-      “Professor Mukherjee did an exceptional job in providing lectures and other resources to help us succeed.
-      I did one of the best jobs in an economics class because of her specifically.”
+      Professor Mukherjee did an exceptional job in providing lectures and other resources to help us succeed.
+      I did one of the best jobs in an economics class because of her specifically.
     </div>
 
     <div class="feedback-card">
-      “Instructor is very knowledgeable in the material, stuck to the syllabus, and good on implying examples to the material being taught.”
+      Instructor is very knowledgeable in the material, stuck to the syllabus, and good on implying examples to the material being taught.
     </div>
 
     <div class="feedback-card">
-      “The course would normally be a more difficult course regarding mathematics and utilizing formulas. As a whole, the course taught me important subjects that I would need to utilize in the future if I continued with a future in Finance. With Professor Mukherjee, she only had strengths for this course that allowed us to succeed and I wouldn’t say there would be any need for improvement.”
+      The course would normally be a more difficult course regarding mathematics and utilizing formulas. As a whole, the course taught me important subjects that I would need to utilize in the future if I continued with a future in Finance. With Professor Mukherjee, she only had strengths for this course that allowed us to succeed and I wouldn’t say there would be any need for improvement.
     </div>
 
     <div class="feedback-card">
-      “The professor did well with teaching and assigning an adequate amount of homework.”
+      The professor did well with teaching and assigning an adequate amount of homework.
     </div>
 
     <div class="feedback-card">
-      “Instructor would talk about subject and give examples which was nice. Especially for weird formulas and their use.”
+      Instructor would talk about subject and give examples which was nice. Especially for weird formulas and their use.
     </div>
 
     <div class="feedback-card">
-      “Great teacher and a fun class.”
+      Great teacher and a fun class.
     </div>
 
     <div class="feedback-card">
-      “The course itself was engaging and taught me a lot about economics.”
+      The course itself was engaging and taught me a lot about economics.
     </div>
 
     <div class="feedback-card">
-      “Instructor had great knowledge and ways of teaching the class. Great structure of teaching the course throughout the semester.”
+      Instructor had great knowledge and ways of teaching the class. Great structure of teaching the course throughout the semester.
     </div>
 
     <div class="feedback-card">
-      “I think she is a great teacher. She’s smart. She’s very knowledgeable. She’s understanding, she’s willing to work with you and help you.”
+      I think she is a great teacher. She’s smart. She’s very knowledgeable. She’s understanding, she’s willing to work with you and help you.
     </div>
 
     <div class="feedback-card">
-      “I really appreciated having the concepts broken down slowly for me. I also really appreciated our professor checking in on the class and asking how we were feeling after she taught something difficult. Everything was explained well and she would take the time to draw out concepts for us so we could understand more in depth. I genuinely enjoyed this class.”
+      I really appreciated having the concepts broken down slowly for me. I also really appreciated our professor checking in on the class and asking how we were feeling after she taught something difficult. Everything was explained well and she would take the time to draw out concepts for us so we could understand more in depth. I genuinely enjoyed this class.
     </div>
 
     <div class="feedback-card">
-      “I love how professor Mukherjee was very straight to the point and wouldn’t confuse the class.”
+      I love how professor Mukherjee was very straight to the point and wouldn’t confuse the class.
     </div>
 
     <div class="feedback-card">
-      “She did amazing, I really enjoyed her class would take her as a professor again.”
+      She did amazing, I really enjoyed her class would take her as a professor again.
     </div>
   </div>
 </section>
+
 </body>
 </html>
+
+
