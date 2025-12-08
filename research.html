@@ -130,6 +130,17 @@
       background: #3b5998;
     }
 
+  .figure-caption-page {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #333;
+  text-align: center;   /* remove if you want left alignment */
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
     .abstract-title {
       font-weight: 700;
       margin-top: 18px;
@@ -263,10 +274,12 @@
        <!-- RIGHT COLUMN: CARD WITH IMAGE -->
        <div class="paper-right">
        <div class="paper-card">
-          <img src="neglif.png" alt="Figure from the paper"><br>
-           <p class="figure-caption">
-    Proportion of stock holders conditional on the number of life events.
-  </p>
+         <img src="neglif.png" alt="Figure from the paper"><br>
+         
+         <!-- Caption on the page (NOT inside the card) -->
+         <p class="figure-caption-page">
+         Figure 1: Proportion of stock holders conditional on the number of traumatic life events.
+         </p>
         </div>
         <br>
       </div>
