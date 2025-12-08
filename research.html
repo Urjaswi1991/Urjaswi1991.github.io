@@ -91,8 +91,8 @@
 .paper-right {
   flex: 1.2;
   display: flex;
-  margin-top: 25px;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;   /* centers card + caption */
 }
 
 /* CARD THAT HOLDS THE DIAGRAM */
@@ -130,15 +130,12 @@
       background: #3b5998;
     }
 
-  .figure-caption-page {
+.figure-caption-page {
   margin-top: 10px;
   font-size: 14px;
-  line-height: 1.4;
-  color: #333;
- /* remove if you want left alignment */
+  color: #444;
+  text-align: center;    /* remove if you want left-aligned */
   max-width: 90%;
-  margin-left: auto;
-  margin-right: auto;
 }
 
     .abstract-title {
