@@ -91,19 +91,20 @@
 .paper-right {
   flex: 1.2;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;   /* centers card + caption */
 }
 
 /* CARD THAT HOLDS THE DIAGRAM */
 .paper-card {
-  background: #ffffff;
+  background: white;
   padding: 20px;
-  border-radius: 18px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
   display: flex;
-  justify-content: center;
+  flex-direction: column;    /* <--- IMPORTANT */
+  align-items: center;       /* centers image + caption */
+  max-width: 100%;
 }
 
 .paper-card img {
@@ -130,12 +131,13 @@
       background: #3b5998;
     }
 
-.figure-caption-page {
-  margin-top: 10px;
+.figure-caption {
+  margin-top: 12px;
   font-size: 14px;
-  color: #444;
-  text-align: center;    /* remove if you want left-aligned */
-  max-width: 90%;
+  color: #555;
+  text-align: center;
+  font-style: italic;
+  line-height: 1.4;
 }
 
     .abstract-title {
@@ -274,7 +276,7 @@
          <img src="neglif.png" alt="Figure from the paper"><br>
          
          <!-- Caption on the page (NOT inside the card) -->
-         <p class="figure-caption-page">
+         <p class="figure-caption">
          Proportion of stock holders conditional on the number of traumatic life events.
          </p>
         </div>
